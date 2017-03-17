@@ -1,0 +1,14 @@
+  <br/>
+  <div class="col-md-3">
+    <div ng-if="repo.length" ng-repeat="x in repo">
+      <ul class="nav nav-pills nav-stacked">
+        <li role="presentation" ui-sref="repoCommits({userName:x.owner.login,repoName:x.name})" ng-click="getCommits()" class="active"><a href="#">{{x.name}}</a></li>
+        <br/>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <div>
+      <ui-view></ui-view>
+    </div>
+  </div>

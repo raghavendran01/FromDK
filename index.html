@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="sampleTask">
+
+<head>
+  <meta charset="utf-8" />
+  <title>GIT Repository</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+  <script data-require="angular.js@1.3.x" src="https://code.angularjs.org/1.3.20/angular.js" data-semver="1.3.20"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
+  <script src="lib/ui-router.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controller.js"></script>
+</head>
+
+<body ng-controller="MainCtrl">
+  <header >
+      <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <a class="navbar-brand" href="#">BETSOL UI Task</a>
+              </div>
+              <form class="navbar-form navbar-left">
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Enter GitHub User Name " ng-model="gitUserName" />
+                  </div>
+                  <button type="button" ui-sref="repoList" class="btn btn-default" ng-click="getUserRepo()">Submit</button>
+              </form>
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#"><span class="glyphicon glyphicon-user"></span>  Diviyakumar SM</a></li>
+              </ul>
+          </div>
+      </nav>
+
+  </header>
+  <div class="row" >
+      <div class="col-md-12">
+          <canvas id="myChart" ></canvas>
+      </div>
+      <div class="col-md-12" >
+          <ui-view></ui-view>
+      </div>
+  </div>
+
+</body>
+
+</html>
