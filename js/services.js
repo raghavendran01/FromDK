@@ -13,7 +13,7 @@ app.factory('getService',['$http','$q',function($http,$q){
             deferred.reject(error);
         });
 
-      return deferred.promise;
+      return deferred.promise
     }
     
   }
